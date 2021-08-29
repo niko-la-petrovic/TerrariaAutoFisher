@@ -34,7 +34,7 @@ Press F when the zone is ready and the fishing rod bobber is in the water.
 
 # TODOs
 
-- Code style improvements
+- Code style improvements (written when I was just learning about platform invocation, threading, ...)
 - Perf. improvements with the screen capture
 - Documentation
 - Customizability of keybindings
