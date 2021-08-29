@@ -31,3 +31,11 @@ Press Num4 to activate the mouse and keyboard hook.
 Press Num5 to start selecting an area with your mouse and Num5 again to create a rectangle.
 
 Press F when the zone is ready and the fishing rod bobber is in the water.
+
+# TODOs
+
+- Code style improvements
+- Perf. improvements with the screen capture
+- Documentation
+- Customizability of keybindings
+- Greater customizability of runtime behavior 
