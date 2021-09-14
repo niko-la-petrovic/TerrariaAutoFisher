@@ -23,10 +23,13 @@ Fishing in Terraria probably the most tedious bit the game offers.
 
 # Using the code
 
+The fish being caught is registered as a change in the color red, over a specified threshold, inside of the selected area.
+Different fishing rods can produce different changes in the color red, so the threshold can be adjusted as needed.
+
 A transparent overlay in the top left corner will be displayed, containing instructions about which numpad keys to use for what.
 The overlay does not contain all of the possible interactions.
 
-Press Num4 to activate the mouse and keyboard hook.
+Press Num4 to start handling other key presses.
 
 Press Num5 to start selecting an area with your mouse and Num5 again to create a rectangle.
 
