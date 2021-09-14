@@ -30,7 +30,6 @@ namespace TerrariaAutoFisher
 
         ControlForm controlForm;
 
-        int[] currentCoords = new int[2];
         int[] initialCoords = new int[2];
         int[] finalCoords = new int[2];
 
@@ -57,17 +56,9 @@ namespace TerrariaAutoFisher
 
             Opacity = 0.7;
 
-            //
-
             ShowInTaskbar = false;
 
-            //
-
-            //fastTimer.Enabled = false;
-            //fastTimer.Interval = 100;
-            //fastTimer.Tick += new EventHandler(FastTimer);
-
-            //for clickthrough
+            // Clickthrough
             int initialStyle = GetWindowLong(Handle, -20);
             SetWindowLong(new HandleRef(this, Handle), -20, initialStyle | 0x80000 | 0x20);
         }
@@ -76,7 +67,6 @@ namespace TerrariaAutoFisher
         {
             initialCoords = initial;
             finalCoords = final;
-            //this.Invalidate();
         }
 
         public Rectangle CoordsRect()
@@ -134,10 +124,10 @@ namespace TerrariaAutoFisher
         {
             Invalidate();
         }
-        
+
         private void SlowTimer_Tick(object sender, EventArgs e)
         {
-            int calculatedRed = controlForm.CalculateRed();
+            int calculatedRed = controlForm.CurrentRed;
             int startingRed = controlForm.StartingRed;
 
             AddRed(calculatedRed);
@@ -147,21 +137,13 @@ namespace TerrariaAutoFisher
             labelAverageRed.Text = "Average red: " + MeanReds();
             labelRedDiff.Text = " Red Diff: " + (startingRed - calculatedRed);
         }
-        #endregion
 
-        private void TestDraw(Graphics graphics)
-        {
-            SolidBrush brush = new SolidBrush(Color.Red);
-            Pen pen = new Pen(brush);
-            Graphics formGraphics = CreateGraphics();
-            formGraphics.DrawRectangle(pen, new Rectangle(0, 0, 200, 300));
-            brush.Dispose();
-            pen.Dispose();
-        }
+        #endregion
 
         private void DrawSelectRect(Graphics graphics)
         {
-            if (initialCoords[0]!=0 && initialCoords[1] != 0 && finalCoords[0]!=0 && finalCoords[1]!=0)
+            if (initialCoords[0] != 0 && initialCoords[1] != 0
+                && finalCoords[0] != 0 && finalCoords[1] != 0)
             {
                 SolidBrush brush = new SolidBrush(Color.Red);
                 Pen pen = new Pen(brush, 2);
@@ -172,7 +154,6 @@ namespace TerrariaAutoFisher
                 formGraphics.DrawRectangle(pen, rect);
                 brush.Dispose();
                 pen.Dispose();
-                //Debug.WriteLine("Initial: x{0},y{1} | Final: x{2},y{3}", initialCoords[0], initialCoords[1],finalCoords[0],finalCoords[1]);
             }
         }
 
@@ -180,7 +161,6 @@ namespace TerrariaAutoFisher
         {
             base.OnPaint(e);
 
-            //TestDraw(e.Graphics);
             DrawSelectRect(e.Graphics);
         }
 
@@ -197,7 +177,7 @@ namespace TerrariaAutoFisher
         public double MeanReds()
         {
             int mean = 0;
-            for(int i = 0; i < reds.Length; i++)
+            for (int i = 0; i < reds.Length; i++)
             {
                 mean += reds[i];
             }
@@ -232,6 +212,7 @@ namespace TerrariaAutoFisher
         {
             labelFishing.ForeColor = Color.FromName(text);
         }
+
         #endregion
     }
 }

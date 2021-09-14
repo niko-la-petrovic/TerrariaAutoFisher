@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.picturePreview = new System.Windows.Forms.PictureBox();
             this.numericDelay = new System.Windows.Forms.NumericUpDown();
             this.numericDuration = new System.Windows.Forms.NumericUpDown();
@@ -37,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.numericRefishDelay = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
+            this.showPreviewCheckBox = new System.Windows.Forms.CheckBox();
+            this.colorUpdateTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picturePreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericDelay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericDuration)).BeginInit();
@@ -46,7 +49,7 @@
             // 
             // picturePreview
             // 
-            this.picturePreview.Location = new System.Drawing.Point(21, 22);
+            this.picturePreview.Location = new System.Drawing.Point(15, 111);
             this.picturePreview.Name = "picturePreview";
             this.picturePreview.Size = new System.Drawing.Size(60, 57);
             this.picturePreview.TabIndex = 0;
@@ -54,7 +57,7 @@
             // 
             // numericDelay
             // 
-            this.numericDelay.Location = new System.Drawing.Point(255, 36);
+            this.numericDelay.Location = new System.Drawing.Point(153, 32);
             this.numericDelay.Maximum = new decimal(new int[] {
             20000,
             0,
@@ -72,7 +75,7 @@
             // 
             // numericDuration
             // 
-            this.numericDuration.Location = new System.Drawing.Point(255, 89);
+            this.numericDuration.Location = new System.Drawing.Point(153, 85);
             this.numericDuration.Maximum = new decimal(new int[] {
             20000,
             0,
@@ -91,7 +94,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(255, 13);
+            this.label1.Location = new System.Drawing.Point(153, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 2;
@@ -100,7 +103,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(255, 66);
+            this.label2.Location = new System.Drawing.Point(153, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 2;
@@ -108,7 +111,7 @@
             // 
             // numericRed
             // 
-            this.numericRed.Location = new System.Drawing.Point(117, 36);
+            this.numericRed.Location = new System.Drawing.Point(15, 32);
             this.numericRed.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -127,7 +130,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(114, 13);
+            this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 2;
@@ -135,7 +138,7 @@
             // 
             // numericRefishDelay
             // 
-            this.numericRefishDelay.Location = new System.Drawing.Point(117, 89);
+            this.numericRefishDelay.Location = new System.Drawing.Point(15, 85);
             this.numericRefishDelay.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -154,17 +157,33 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(114, 66);
+            this.label4.Location = new System.Drawing.Point(12, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Re-fish delay";
             // 
+            // showPreviewCheckBox
+            // 
+            this.showPreviewCheckBox.AutoSize = true;
+            this.showPreviewCheckBox.Location = new System.Drawing.Point(291, 32);
+            this.showPreviewCheckBox.Name = "showPreviewCheckBox";
+            this.showPreviewCheckBox.Size = new System.Drawing.Size(94, 17);
+            this.showPreviewCheckBox.TabIndex = 3;
+            this.showPreviewCheckBox.Text = "Show Preview";
+            this.showPreviewCheckBox.UseVisualStyleBackColor = true;
+            this.showPreviewCheckBox.CheckedChanged += new System.EventHandler(this.showPreviewCheckBox_CheckedChanged);
+            // 
+            // colorUpdateTimer
+            // 
+            this.colorUpdateTimer.Tick += new System.EventHandler(this.colorUpdateTimer_Tick);
+            // 
             // ControlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 141);
+            this.ClientSize = new System.Drawing.Size(446, 225);
+            this.Controls.Add(this.showPreviewCheckBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -198,6 +217,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericRefishDelay;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox showPreviewCheckBox;
+        private System.Windows.Forms.Timer colorUpdateTimer;
     }
 }
 

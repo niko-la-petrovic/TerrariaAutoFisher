@@ -9,6 +9,7 @@
     <RootNamespace>TerrariaAutoFisher</RootNamespace>
     <AssemblyName>TerrariaAutoFisher</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <LangVersion>8.0</LangVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -34,10 +35,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Np.Windows, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Np.Windows.1.0.2\lib\net472\Np.Windows.dll</HintPath>
+      <HintPath>..\packages\Np.Windows.1.0.3\lib\net472\Np.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Np.Windows.Hooks, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Np.Windows.Hooks.1.0.4\lib\net472\Np.Windows.Hooks.dll</HintPath>
+      <HintPath>..\packages\Np.Windows.Hooks.1.0.5\lib\net472\Np.Windows.Hooks.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,7 +67,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScreenCap.cs" />
     <EmbeddedResource Include="ControlForm.resx">
       <DependentUpon>ControlForm.cs</DependentUpon>
     </EmbeddedResource>

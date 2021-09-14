@@ -42,7 +42,6 @@
             // 
             // fastTimer
             // 
-            this.fastTimer.Interval = 250;
             this.fastTimer.Tick += new System.EventHandler(this.FastTimer_Tick);
             // 
             // labelStartRed
