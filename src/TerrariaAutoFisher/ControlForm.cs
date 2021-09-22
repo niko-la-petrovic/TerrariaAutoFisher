@@ -126,7 +126,7 @@ namespace TerrariaAutoFisher
         }
 
         /// <summary>
-        /// Set overlay.
+        /// Set overlay coords.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -275,7 +275,7 @@ namespace TerrariaAutoFisher
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void KeyDown_NumPad1(object sender, KeyEventArgs e)
+        public void KeyDown_NumPad1(object sender, KeyEventArgs e)
         {
             if (active && e.KeyCode == Keys.NumPad1)
             {
@@ -289,7 +289,7 @@ namespace TerrariaAutoFisher
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void KeyDown_NumPad3(object sender, KeyEventArgs e)
+        public void KeyDown_NumPad3(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.NumPad3)
                 ObtainTerrariaHandle();
@@ -310,7 +310,7 @@ namespace TerrariaAutoFisher
                 OverlaySendCoords(initialCoords, currentCoords);
         }
 
-        public int CalculateRed()
+        protected int CalculateRed()
         {
             try
             {
