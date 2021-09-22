@@ -9,7 +9,7 @@ As such, fishing rods with red bobbers work the best, as they create the biggest
 # How to use as is
 
 ### Download the binaries 
-TODO
+Look to the Releases section of this repository.
 
 ### Building
 
@@ -23,14 +23,19 @@ Fishing in Terraria probably the most tedious bit the game offers.
 
 # Using the code
 
+The fish being caught is registered as a change in the color red, over a specified threshold, inside of the selected area.
+Different fishing rods can produce different changes in the color red, so the threshold can be adjusted as needed.
+
 A transparent overlay in the top left corner will be displayed, containing instructions about which numpad keys to use for what.
 The overlay does not contain all of the possible interactions.
 
-Press Num4 to activate the mouse and keyboard hook.
-
-Press Num5 to start selecting an area with your mouse and Num5 again to create a rectangle.
-
-Press F when the zone is ready and the fishing rod bobber is in the water.
+- Num4: Treat other keys as active.
+- Num5: Set initial or final coordinate of the overlay rectangle at the current mouse position.
+- Num2: Adjust initial and final coordinates by the current mouse position.
+- F: Start fishing using the overlay.
+- Num0: Toggle automatic shooting (left click).
+- Num1: Make the red threshold value the current red difference.
+- Num3: Obtain Terraria handle.
 
 # TODOs
 
