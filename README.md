@@ -9,7 +9,7 @@ As such, fishing rods with red bobbers work the best, as they create the biggest
 # How to use as is
 
 ### Download the binaries 
-Look to the Release section of this repository.
+Look to the Releases section of this repository.
 
 ### Building
 
