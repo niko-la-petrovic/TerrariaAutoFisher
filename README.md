@@ -2,6 +2,8 @@
 
 ![Preview gif](https://j.gifs.com/36yGMO.gif)
 
+[Demo](https://www.youtube.com/watch?v=KeMQsX-q-88)
+
 # Latest Notes
 - The program/code relies on the difference in the red color of a selected zone when fishing.
 As such, fishing rods with red bobbers work the best, as they create the biggest difference when going below water.
